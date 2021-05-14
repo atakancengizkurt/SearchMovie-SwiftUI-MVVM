@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		E82B08F7264D802B00D61736 /* SearchMovie_SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B08F6264D802B00D61736 /* SearchMovie_SwiftUI_MVVMApp.swift */; };
-		E82B08F9264D802B00D61736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B08F8264D802B00D61736 /* ContentView.swift */; };
+		E82B08F9264D802B00D61736 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B08F8264D802B00D61736 /* MovieListView.swift */; };
 		E82B08FB264D802C00D61736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82B08FA264D802C00D61736 /* Assets.xcassets */; };
 		E82B08FE264D802C00D61736 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82B08FD264D802C00D61736 /* Preview Assets.xcassets */; };
 		E82B0909264D802C00D61736 /* SearchMovie_SwiftUI_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B0908264D802C00D61736 /* SearchMovie_SwiftUI_MVVMTests.swift */; };
 		E82B0914264D802C00D61736 /* SearchMovie_SwiftUI_MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B0913264D802C00D61736 /* SearchMovie_SwiftUI_MVVMUITests.swift */; };
+		E82B0926264D8C9B00D61736 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B0925264D8C9B00D61736 /* Movie.swift */; };
+		E82B0929264D9C7800D61736 /* DownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B0928264D9C7800D61736 /* DownloaderClient.swift */; };
+		E82B092B264EBFF800D61736 /* MoviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B092A264EBFF800D61736 /* MoviewViewModel.swift */; };
+		E8E1CE91264ED3B80059EB19 /* ImageDownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CE90264ED3B80059EB19 /* ImageDownloaderClient.swift */; };
+		E8E1CE93264ED5B10059EB19 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CE92264ED5B10059EB19 /* ImageView.swift */; };
+		E8E1CE95264EFF7D0059EB19 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CE94264EFF7D0059EB19 /* MovieDetail.swift */; };
+		E8E1CE97264F05D60059EB19 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CE96264F05D60059EB19 /* MovieDetailViewModel.swift */; };
+		E8E1CE99264F08170059EB19 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CE98264F08170059EB19 /* MovieDetailView.swift */; };
+		E8E1CE9B264F0AA10059EB19 /* MovieListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CE9A264F0AA10059EB19 /* MovieListRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +44,7 @@
 /* Begin PBXFileReference section */
 		E82B08F3264D802B00D61736 /* SearchMovie-SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SearchMovie-SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82B08F6264D802B00D61736 /* SearchMovie_SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovie_SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
-		E82B08F8264D802B00D61736 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E82B08F8264D802B00D61736 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		E82B08FA264D802C00D61736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E82B08FD264D802C00D61736 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E82B08FF264D802C00D61736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +54,15 @@
 		E82B090F264D802C00D61736 /* SearchMovie-SwiftUI-MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SearchMovie-SwiftUI-MVVMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82B0913264D802C00D61736 /* SearchMovie_SwiftUI_MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovie_SwiftUI_MVVMUITests.swift; sourceTree = "<group>"; };
 		E82B0915264D802C00D61736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E82B0925264D8C9B00D61736 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E82B0928264D9C7800D61736 /* DownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderClient.swift; sourceTree = "<group>"; };
+		E82B092A264EBFF800D61736 /* MoviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewViewModel.swift; sourceTree = "<group>"; };
+		E8E1CE90264ED3B80059EB19 /* ImageDownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderClient.swift; sourceTree = "<group>"; };
+		E8E1CE92264ED5B10059EB19 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		E8E1CE94264EFF7D0059EB19 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		E8E1CE96264F05D60059EB19 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		E8E1CE98264F08170059EB19 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		E8E1CE9A264F0AA10059EB19 /* MovieListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +113,11 @@
 		E82B08F5264D802B00D61736 /* SearchMovie-SwiftUI-MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				E82B08F6264D802B00D61736 /* SearchMovie_SwiftUI_MVVMApp.swift */,
-				E82B08F8264D802B00D61736 /* ContentView.swift */,
+				E82B0927264D9C6400D61736 /* Service */,
+				E82B0924264D8C7C00D61736 /* ViewModel */,
+				E82B0923264D8C7100D61736 /* Model */,
+				E82B0922264D8C6700D61736 /* View */,
+				E82B0921264D8C6200D61736 /* App */,
 				E82B08FA264D802C00D61736 /* Assets.xcassets */,
 				E82B08FF264D802C00D61736 /* Info.plist */,
 				E82B08FC264D802C00D61736 /* Preview Content */,
@@ -128,6 +149,52 @@
 				E82B0915264D802C00D61736 /* Info.plist */,
 			);
 			path = "SearchMovie-SwiftUI-MVVMUITests";
+			sourceTree = "<group>";
+		};
+		E82B0921264D8C6200D61736 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E82B08F6264D802B00D61736 /* SearchMovie_SwiftUI_MVVMApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E82B0922264D8C6700D61736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E82B08F8264D802B00D61736 /* MovieListView.swift */,
+				E8E1CE92264ED5B10059EB19 /* ImageView.swift */,
+				E8E1CE98264F08170059EB19 /* MovieDetailView.swift */,
+				E8E1CE9A264F0AA10059EB19 /* MovieListRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E82B0923264D8C7100D61736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E82B0925264D8C9B00D61736 /* Movie.swift */,
+				E8E1CE94264EFF7D0059EB19 /* MovieDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E82B0924264D8C7C00D61736 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E82B092A264EBFF800D61736 /* MoviewViewModel.swift */,
+				E8E1CE96264F05D60059EB19 /* MovieDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E82B0927264D9C6400D61736 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E82B0928264D9C7800D61736 /* DownloaderClient.swift */,
+				E8E1CE90264ED3B80059EB19 /* ImageDownloaderClient.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +326,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82B08F9264D802B00D61736 /* ContentView.swift in Sources */,
+				E8E1CE99264F08170059EB19 /* MovieDetailView.swift in Sources */,
+				E82B08F9264D802B00D61736 /* MovieListView.swift in Sources */,
+				E82B0926264D8C9B00D61736 /* Movie.swift in Sources */,
 				E82B08F7264D802B00D61736 /* SearchMovie_SwiftUI_MVVMApp.swift in Sources */,
+				E82B0929264D9C7800D61736 /* DownloaderClient.swift in Sources */,
+				E82B092B264EBFF800D61736 /* MoviewViewModel.swift in Sources */,
+				E8E1CE93264ED5B10059EB19 /* ImageView.swift in Sources */,
+				E8E1CE91264ED3B80059EB19 /* ImageDownloaderClient.swift in Sources */,
+				E8E1CE9B264F0AA10059EB19 /* MovieListRowView.swift in Sources */,
+				E8E1CE95264EFF7D0059EB19 /* MovieDetail.swift in Sources */,
+				E8E1CE97264F05D60059EB19 /* MovieDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +493,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"SearchMovie-SwiftUI-MVVM/Preview Content\"";
-				DEVELOPMENT_TEAM = 2V2G6F94A8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SearchMovie-SwiftUI-MVVM/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -429,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "atakancengizkurt.SearchMovie-SwiftUI-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,9 +516,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"SearchMovie-SwiftUI-MVVM/Preview Content\"";
-				DEVELOPMENT_TEAM = 2V2G6F94A8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SearchMovie-SwiftUI-MVVM/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -451,6 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "atakancengizkurt.SearchMovie-SwiftUI-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

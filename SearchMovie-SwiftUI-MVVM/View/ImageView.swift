@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct ImageView: View {
+  let url: String
+  @ObservedObject var imageDownloaderClient = ImageDownloaderClient()
+  
+  init(url: String) {
+    self.url = url
+    self.imageDownloaderClient.imageDownload(url: self.url)
+  }
+  
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      if let data = self.imageDownloaderClient.imageData{
+        return Image(uiImage: UIImage(data: data)!)
+          .resizable()
+          
+      }else {
+        return Image("placeholder")
+          .resizable()
+        
+          
+      }
     }
 }
 
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView()
+      ImageView(url: "").previewLayout(.sizeThatFits)
     }
 }

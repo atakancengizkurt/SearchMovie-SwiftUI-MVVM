@@ -18,9 +18,18 @@ struct Movie : Decodable {
   private enum CodingKeys: String, CodingKey{
     case title = "Title"
     case year = "Year"
-    case imdbId = "imdbId"
+    case imdbId = "imdbID"
     case type = "Type"
     case poster = "Poster"
   }
   
+}
+
+
+struct Movies: Decodable{
+  let movies : [Movie]
+  
+  private enum CodingKeys: String, CodingKey{
+    case movies = "Search"
+  }
 }

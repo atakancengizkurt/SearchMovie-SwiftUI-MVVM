@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct MovieListRowView: View {
+  var movie: MovieViewModel
+  
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      HStack{
+        ImageView(url: movie.poster ?? "")
+          .aspectRatio(contentMode: .fit)
+          .frame(width: 100, height: 100, alignment: .center)
+        VStack(alignment:.leading){
+          Text(movie.title ?? "")
+            .foregroundColor(.blue)
+            .font(.title)
+          Text(movie.year ?? "")
+            .bold()
+            .foregroundColor(.orange)
+        }
+      }
     }
 }
 
-struct MovieListRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieListRowView()
-    }
-}
+

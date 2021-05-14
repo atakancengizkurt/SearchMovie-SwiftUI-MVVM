@@ -8,19 +8,48 @@
 import SwiftUI
 
 struct MovieListView: View {
+  @ObservedObject var movieListViewModel: MovieListViewModel
+  
+  @State var movieName = ""
+  
+  init() {
+    self.movieListViewModel = MovieListViewModel()
+    
+  }
+  
+  
   var body: some View {
-    Button(action: {
-      DownloaderClient().searchMovies(search: "pulp") { result in
-        switch result{
-        case .success(let movies):
-          print(movies)
-        case .failure(let error):
-          print(error)
+    NavigationView{
+      VStack{
+        TextField("Search Movie", text: $movieName) { _ in
+        } onCommit: {
+          self.movieListViewModel.searchMovie(search: movieName.trimmingCharacters(in: .whitespacesAndNewlines).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? movieName)
         }
-      }
-    }, label: {
-      Text("Get Data")
-    })
+        .padding()
+        .keyboardType(.webSearch)
+        .textFieldStyle(RoundedBorderTextFieldStyle())
+        
+        
+        
+        
+        if self.movieListViewModel.movies.count > 0{
+          List(self.movieListViewModel.movies, id: \.imdbId){
+            movie in
+            NavigationLink(
+              destination: MovieDetailView(imdbId: movie.imdbId ?? ""),
+              label: {
+                MovieListRowView(movie: movie)
+              })
+          }
+        }else{
+          Image("placeholder")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+        }
+        Spacer()
+      }.navigationTitle(Text("Search Movie"))
+    }
+    
   }
 }
 
