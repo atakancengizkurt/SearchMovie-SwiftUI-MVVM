@@ -13,9 +13,14 @@ enum DownloaderError: Error{
   case noDataAvailable
 }
 
+
+
+
 class DownloaderClient {
+  static let apiKey = "aa971fa3" //You can have your own key for the api with this url: http://www.omdbapi.com/apikey.aspx
+  
   func searchMovies(search: String, completion: @escaping(Result<[Movie]?, DownloaderError>) -> Void) {
-    guard let url  = URL(string: "http://www.omdbapi.com/?s=\(search)&apikey=aa971fa3") else {
+    guard let url  = URL(string: "http://www.omdbapi.com/?s=\(search)&apikey=\(DownloaderClient.apiKey)") else {
       return completion(.failure(.wrongUrl))
     }
     
@@ -36,7 +41,7 @@ class DownloaderClient {
   
   
   func getMovieDetail(imdbId: String, completion: @escaping (Result<MovieDetail?,DownloaderError>) -> Void) {
-    guard let url = URL(string: "http://www.omdbapi.com/?i=\(imdbId)&apikey=aa971fa3") else{
+    guard let url = URL(string: "http://www.omdbapi.com/?i=\(imdbId)&apikey=\(DownloaderClient.apiKey)") else{
       return completion(.failure(.wrongUrl))
     }
     
